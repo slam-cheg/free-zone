@@ -1,0 +1,21 @@
+.inner-wrapper {
+	width: 1319px;
+	margin: 0 auto;
+	position: relative;
+
+	@media screen and (max-width: $desktop) {
+		max-width: 1160px;
+	}
+	@media screen and (max-width: $hor-tablet) {
+		max-width: 940px;
+	}
+	@media screen and (max-width: $ver-tablet) {
+		max-width: 620px;
+	}
+	@media screen and (max-width: $hor-mobile) {
+		max-width: 460px;
+	}
+	@media screen and (max-width: $ver-mobile) {
+		max-width: 300px;
+	}
+}

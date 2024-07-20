@@ -1,0 +1,9 @@
+.filters__shadow {
+	background: linear-gradient(270deg, #161618 0%, rgba(22, 22, 24, 0) 100%), linear-gradient(270deg, #161618 0%, rgba(22, 22, 24, 0) 100%);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    z-index: 2;
+}

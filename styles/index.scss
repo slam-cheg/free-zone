@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import "../fonts/fonts.css";
+@import "./modules/variables.scss";
+@import "./modules/mixins.scss";
+@import "./modules/blocks/inner-wrapper/inner-wrapper.scss";
+@import "./modules/blocks/courses/courses.scss";
+@import "./modules/blocks/list/list.scss";
+@import "./modules/blocks/list/_filters/list_filters.scss";
+@import "./modules/blocks/list/__item/list__item.scss";
+@import "./modules/blocks/list/__item/_active/list__item_active.scss";
+@import "./modules/blocks/h2-title/h2-title.scss";
+@import "./modules/blocks/h3-title/h3-title.scss";
+@import "./modules/blocks/filters/filters.scss";
+@import "./modules/blocks/filters/_visible/filters_visible.scss";
+@import "./modules/blocks/filter/filter.scss";
+@import "./modules/blocks/filter/_active/filter_active.scss";
+@import "./modules/blocks/filter/__name/filter__name.scss";
+@import "./modules/blocks/filter/__close/filter__close.scss";
+@import "./modules/blocks/cards/cards.scss";
+@import "./modules/blocks/cards-wrapper/cards-wrapper.scss";
+@import "./modules/blocks/card/card.scss";
+@import "./modules/blocks/card/__top/card__top.scss";
+@import "./modules/blocks/card/__image/card__image.scss";
+@import "./modules/blocks/card/__bottom/card__bottom.scss";
+@import "./modules/blocks/card/__description/card__description.scss";
+@import "./modules/blocks/wrapper-filters/wrapper-filters.scss";
+@import "./modules/blocks/filters/__shadow/filters__shadow.scss";
+@import "./modules/blocks/filters/__shadow/_left/filters__shadow_left.scss";

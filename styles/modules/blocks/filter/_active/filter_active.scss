@@ -1,0 +1,12 @@
+.filter_active {
+    border-color: $color-carrot;
+    order: 1;
+
+    .filter__name {
+        color: $color-carrot;
+    }
+
+    .filter__close {
+        display: block;
+    }
+}

@@ -1,0 +1,18 @@
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    overflow-y: scroll;
+    gap: 8px;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background: #F1F2F30D;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #F1F2F399;
+        border-radius: 100px;
+    }
+}

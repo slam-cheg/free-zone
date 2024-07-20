@@ -1,0 +1,7 @@
+.h2-title {
+    @include h2;
+    margin-bottom: 60px;
+    margin-inline: auto;
+    text-align: center;
+    max-width: 840px;
+}
