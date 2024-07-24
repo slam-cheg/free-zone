@@ -7,7 +7,7 @@ const cardTemplate = document.querySelector("#card-template").content.querySelec
 const filtersContainer = document.querySelector(".filters");
 const filterItemTemplate = document.querySelector("#filter-item-template").content.querySelector(".filter");
 const categoriesList = document.querySelectorAll(".list__item");
-let activeFilters = HTMLCollection;
+
 
 categoriesList.forEach((category) =>
 	category.addEventListener("click", () => {
@@ -24,34 +24,57 @@ function setCategoryActive(clickedCategory) {
 	clearCards();
 	clickedCategory.classList.add("list__item_active");
 	createInitialCards(clickedCategory.id);
-	setNeededFilters(clickedCategory.id);
+	setNeededFilters(clickedCategory);
 }
 
-function setNeededFilters(categoryId) {
-	const currentCategoryFilters = categories[categoryId].entries;
-	clearFilters();
-	if (currentCategoryFilters.length > 1) {
-		for (let key in cards) {
-			if (categoryId !== "all") {
-				filtersContainer.classList.add("filters_visible");
-			}
-			if (cards[key].id === categoryId) {
-				renderFilter(key, cards[key].id);
-			}
+function setNeededFilters(clickedCategory) {
+	if(clickedCategory.innerText === "Все категории") {
+		clearFilters();
+		return
+	}
+	const categoryId = clickedCategory.id;
+	const currentCategoryFilters = {};
+	for (let key in cards) {
+		if (cards[key].id === categoryId) {
+			currentCategoryFilters[key] = {};
+			currentCategoryFilters[key].categoryId = categoryId;
+			currentCategoryFilters[key].name = key;
+			currentCategoryFilters[key].filter = cards[key].filter;
 		}
+		if (categoryId === "all") {
+			currentCategoryFilters["all"] = {};
+			currentCategoryFilters["all"].categoryId = categoryId;
+			currentCategoryFilters["all"].name = "Все направления";
+			currentCategoryFilters["all"].filter = cards[key].filter;
+		}
+	}
+
+	clearFilters();
+	const size = Object.keys(currentCategoryFilters).length;
+	if(size < 2) {
+		return
+	}
+	for (let key in currentCategoryFilters) {
+		renderFilter(currentCategoryFilters[key].name, currentCategoryFilters[key].filter);
+	}
+	if (filtersContainer.innerHTML !== "") {
+		filtersContainer.classList.add("filters_visible");
 	}
 }
 
 function changeFilters(clickedFilter) {
+	let activeFilters = document.querySelectorAll(".filter_active");
 	if (!clickedFilter.classList.contains("filter_active")) {
 		clickedFilter.classList.add("filter_active");
 		activeFilters = document.querySelectorAll(".filter_active");
 		renderActiveCards(activeFilters);
 	} else {
-		activeFilters = document.querySelectorAll(".filter_active");
 		if (activeFilters.length > 1) {
 			clickedFilter.classList.remove("filter_active");
+			activeFilters = document.querySelectorAll(".filter_active");
 			renderActiveCards(activeFilters);
+		} else {
+			return
 		}
 	}
 }
@@ -59,16 +82,10 @@ function changeFilters(clickedFilter) {
 function renderActiveCards(activeFilters) {
 	clearCards();
 	activeFilters.forEach((filter) => {
-		const currentCategoryFilters = categories[filter.id].entries;
-		const currentFilterName = filter.querySelector(".filter__name").textContent;
-		currentCategoryFilters.forEach((filterInner) => {
-			const neededCards = cards[filterInner].entries;
-			if (currentFilterName === filterInner) {
-				for (let key in neededCards) {
-					renderCard(key, neededCards[key].img, neededCards[key].description, neededCards[key].id);
-				}
-			}
-		});
+		const currentCategoryCards = cards[filter.innerText].entries;
+		for (let card in currentCategoryCards) {
+			renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id);
+		}
 	});
 }
 
@@ -112,28 +129,32 @@ function renderCard(title, image, description, id) {
 	cardDescription.textContent = description;
 	cardElement.id = id;
 
-	if (cardsContainer.querySelector(`#${id}`)) {
-		return;
-	}
-
 	cardsContainer.append(cardElement);
 }
 
 const initialCategory = [...categoriesList].find((category) => category.id === "all");
 setCategoryActive(initialCategory);
-setNeededFilters("all");
+setNeededFilters({id: "all", innerText: "Все категории"});
 
 function createInitialCards(id) {
-	for (let key in cards) {
-		const categoryCards = cards[key].entries;
-		for (let filter in categoryCards) {
-			if (id === cards[key].id) {
-				renderCard(filter, categoryCards[filter].img, categoryCards[filter].description, categoryCards[filter].id);
-			}
+	if (categories[id].entries[0] === undefined) {
+		cardsContainer.classList.add("cards-wrapper_empty");
+		cardsContainer.innerHTML = "Cейчас в этой категории курсов нет, но они скоро появятся!";
+	} else {
+		cardsContainer.classList.remove("cards-wrapper_empty");
+	}
+	for (let key in categories) {
+		if (categories[key].id === id) {
+			const categoryCards = categories[key].entries;
+			categoryCards.forEach((filter) => {
+				if (id === cards[filter].id || id === "all") {
+					const filterCards = cards[filter].entries;
+					for (let filterCard in filterCards) {
+						renderCard(filterCard, filterCards[filterCard].img, filterCards[filterCard].description, filterCards[filterCard].id);
+					}
+				}
+			});
 		}
 	}
-}
 
-createInitialCards("design");
-createInitialCards("marketing");
-createInitialCards("other");
+}

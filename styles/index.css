@@ -206,6 +206,17 @@
   border-radius: 100px;
 }
 
+.cards-wrapper_empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F1F2F3;
+  opacity: 0.6;
+  font-size: 20px;
+  line-height: 1.2;
+  font-family: Suisse Intl, Arial, sans-serif;
+}
+
 .card {
   background-color: rgba(241, 242, 243, 0.05);
   border-radius: 16px;

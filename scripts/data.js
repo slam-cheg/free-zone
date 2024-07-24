@@ -5,6 +5,7 @@ const categories = {
 	},
 	design: {
 		id: "design",
+		filters: ["ux-design", "motion-design", "animation-illustration", "graf-design", "int-design"],
 		entries: ["UX/UI-дизайн", "Анимация и иллюстрация", "Моушн-дизайн и 3D", "Графический дизайн и коммуникации", "Дизайн среды и интерьера"],
 	},
 	marketing: {
@@ -28,6 +29,7 @@ const categories = {
 const cards = {
 	"UX/UI-дизайн": {
 		id: "design",
+		filter: "ux-design",
 		entries: {
 			"UX-дизайн": {
 				id: "ux",
@@ -58,6 +60,7 @@ const cards = {
 	},
 	"Моушн-дизайн и 3D": {
 		id: "design",
+		filter: "motion-design",
 		entries: {
 			"Быстрая анимация иллюстрации в After Effects": {
 				id: "after-effects",
@@ -76,98 +79,9 @@ const cards = {
 			},
 		},
 	},
-	"Современное искусство": {
-		id: "other",
-		entries: {
-			"Женщины в искусстве": {
-				id: "women-art",
-				img: "https://static.tildacdn.com/tild6235-6233-4238-a362-666230663561/art-woman.png",
-				description: "Ольга Герасименко",
-			},
-			"Как узнать себя через искусство?": {
-				id: "self-art",
-				img: "https://static.tildacdn.com/tild3666-6333-4466-b233-313731633964/self-art.png",
-				description: "Ольга Герасименко",
-			},
-			"Что случилось с искусством за последние 100 лет — короче, Современность!": {
-				id: "art-100y",
-				img: "https://static.tildacdn.com/tild3333-3332-4438-b366-623961316564/art-100y.png",
-				description: "Александр Журавлев и Алина Глазун",
-			},
-			"История современной музыки и теория звука": {
-				id: "music-history",
-				img: "https://static.tildacdn.com/tild3865-6139-4635-b830-383861306532/music-history.png",
-				description: "Виктор Черненко",
-			},
-		},
-	},
-	"IT и менеджмент": {
-		id: "other",
-		entries: {
-			"Дизайн-менеджмент: как создавать и продавать дизайн": {
-				id: "design-management",
-				img: "https://static.tildacdn.com/tild3131-6338-4130-b664-613964643036/management.png",
-				description: "Антон Гора и Алексей Лури",
-			},
-			"Создание новых продуктов: методология Customer Development": {
-				id: "customer-development",
-				img: "https://static.tildacdn.com/tild3164-3866-4636-b761-643863303161/custom-devel.png",
-				description: "Мария Ющенко",
-			},
-			"Обработка и анализ данных в Excel": {
-				id: "excel",
-				img: "https://static.tildacdn.com/tild3632-3732-4232-b930-366330393533/excel.png",
-				description: "Александр Михайлов",
-			},
-			"Как руководить дизайнерами": {
-				id: "design-management",
-				img: "https://static.tildacdn.com/tild3563-3966-4536-b762-653336363131/design-lead.png",
-				description: "Костя Горский",
-			},
-			"Методы анализа рынка и конкурентов": {
-				id: "market-analysis",
-				img: "https://static.tildacdn.com/tild3565-3338-4237-b731-313337646433/Image.png",
-				description: "Александр Кужелев и Надежда Назарова",
-			},
-		},
-	},
-	"Видео и кино": {
-		id: "other",
-		entries: {
-			"Женщины в истории кино": {
-				id: "women-cinema",
-				img: "https://static.tildacdn.com/tild6566-6333-4665-a365-663464303735/cinema-woman.png",
-				description: "Алиса Таежная",
-			},
-			"Танец и пластика в кино. Особенности языка и история драматургии": {
-				id: "cinema-dance",
-				img: "https://static.tildacdn.com/tild6365-6236-4436-b035-366665393138/cinema-dance.png",
-				description: "Энжи Таратута, Владимир Егоров и Денис Тагинцев",
-			},
-		},
-	},
-	"Программирование и софт": {
-		id: "other",
-		entries: {
-			"Вечера с Arduino. Базовый курс": {
-				id: "arduino",
-				img: "https://static.tildacdn.com/tild6665-6365-4333-b664-383566313966/arduino.png",
-				description: "Константин Новиков",
-			},
-			"Рисуем кодом": {
-				id: "code-art",
-				img: "https://static.tildacdn.com/tild3261-3366-4935-b931-356363623862/code-art.png",
-				description: "Александр Катин",
-			},
-			"Создание музыки с помощью компьютера и доступного ПО": {
-				id: "music-create",
-				img: "https://static.tildacdn.com/tild6265-6531-4332-a437-656434616639/music-create.png",
-				description: "Сергей Касич",
-			},
-		},
-	},
 	"Анимация и иллюстрация": {
 		id: "design",
+		filter: "animation-illustration",
 		entries: {
 			"Перспектива в иллюстрации": {
 				id: "perspective",
@@ -198,6 +112,7 @@ const cards = {
 	},
 	"Графический дизайн и коммуникации": {
 		id: "design",
+		filter: "graf-design",
 		entries: {
 			"Дизайн журналов": {
 				id: "magazine-design",
@@ -228,6 +143,7 @@ const cards = {
 	},
 	"Дизайн среды и интерьера": {
 		id: "design",
+		filter: "int-design",
 		entries: {
 			"Дизайн-практикум по созданию интерьера": {
 				id: "interior-design",
@@ -236,8 +152,103 @@ const cards = {
 			},
 		},
 	},
+	"Современное искусство": {
+		id: "other",
+		filter: "modern-art",
+		entries: {
+			"Женщины в искусстве": {
+				id: "women-art",
+				img: "https://static.tildacdn.com/tild6235-6233-4238-a362-666230663561/art-woman.png",
+				description: "Ольга Герасименко",
+			},
+			"Как узнать себя через искусство?": {
+				id: "self-art",
+				img: "https://static.tildacdn.com/tild3666-6333-4466-b233-313731633964/self-art.png",
+				description: "Ольга Герасименко",
+			},
+			"Что случилось с искусством за последние 100 лет — короче, Современность!": {
+				id: "art-100y",
+				img: "https://static.tildacdn.com/tild3333-3332-4438-b366-623961316564/art-100y.png",
+				description: "Александр Журавлев и Алина Глазун",
+			},
+			"История современной музыки и теория звука": {
+				id: "music-history",
+				img: "https://static.tildacdn.com/tild3865-6139-4635-b830-383861306532/music-history.png",
+				description: "Виктор Черненко",
+			},
+		},
+	},
+	"IT и менеджмент": {
+		id: "other",
+		filter: "it-management",
+		entries: {
+			"Дизайн-менеджмент: как создавать и продавать дизайн": {
+				id: "design-management",
+				img: "https://static.tildacdn.com/tild3131-6338-4130-b664-613964643036/management.png",
+				description: "Антон Гора и Алексей Лури",
+			},
+			"Создание новых продуктов: методология Customer Development": {
+				id: "customer-development",
+				img: "https://static.tildacdn.com/tild3164-3866-4636-b761-643863303161/custom-devel.png",
+				description: "Мария Ющенко",
+			},
+			"Обработка и анализ данных в Excel": {
+				id: "excel",
+				img: "https://static.tildacdn.com/tild3632-3732-4232-b930-366330393533/excel.png",
+				description: "Александр Михайлов",
+			},
+			"Как руководить дизайнерами": {
+				id: "design-management",
+				img: "https://static.tildacdn.com/tild3563-3966-4536-b762-653336363131/design-lead.png",
+				description: "Костя Горский",
+			},
+			"Методы анализа рынка и конкурентов": {
+				id: "market-analysis",
+				img: "https://static.tildacdn.com/tild3565-3338-4237-b731-313337646433/Image.png",
+				description: "Александр Кужелев и Надежда Назарова",
+			},
+		},
+	},
+	"Видео и кино": {
+		id: "other",
+		filter: "video-cinema",
+		entries: {
+			"Женщины в истории кино": {
+				id: "women-cinema",
+				img: "https://static.tildacdn.com/tild6566-6333-4665-a365-663464303735/cinema-woman.png",
+				description: "Алиса Таежная",
+			},
+			"Танец и пластика в кино. Особенности языка и история драматургии": {
+				id: "cinema-dance",
+				img: "https://static.tildacdn.com/tild6365-6236-4436-b035-366665393138/cinema-dance.png",
+				description: "Энжи Таратута, Владимир Егоров и Денис Тагинцев",
+			},
+		},
+	},
+	"Программирование и софт": {
+		id: "other",
+		filter: "programming-software",
+		entries: {
+			"Вечера с Arduino. Базовый курс": {
+				id: "arduino",
+				img: "https://static.tildacdn.com/tild6665-6365-4333-b664-383566313966/arduino.png",
+				description: "Константин Новиков",
+			},
+			"Рисуем кодом": {
+				id: "code-art",
+				img: "https://static.tildacdn.com/tild3261-3366-4935-b931-356363623862/code-art.png",
+				description: "Александр Катин",
+			},
+			"Создание музыки с помощью компьютера и доступного ПО": {
+				id: "music-create",
+				img: "https://static.tildacdn.com/tild6265-6531-4332-a437-656434616639/music-create.png",
+				description: "Сергей Касич",
+			},
+		},
+	},
 	"Маркетинг": {
 		id: "marketing",
+		filter: "marketing",
 		entries: {
 			"Контент-менеджер на маркетплейсах": {
 				id: "content-manager",
