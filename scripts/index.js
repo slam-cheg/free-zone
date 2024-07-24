@@ -8,7 +8,6 @@ const filtersContainer = document.querySelector(".filters");
 const filterItemTemplate = document.querySelector("#filter-item-template").content.querySelector(".filter");
 const categoriesList = document.querySelectorAll(".list__item");
 
-
 categoriesList.forEach((category) =>
 	category.addEventListener("click", () => {
 		setCategoryActive(category);
@@ -28,9 +27,9 @@ function setCategoryActive(clickedCategory) {
 }
 
 function setNeededFilters(clickedCategory) {
-	if(clickedCategory.innerText === "Все категории") {
+	if (clickedCategory.innerText === "Все категории") {
 		clearFilters();
-		return
+		return;
 	}
 	const categoryId = clickedCategory.id;
 	const currentCategoryFilters = {};
@@ -50,9 +49,8 @@ function setNeededFilters(clickedCategory) {
 	}
 
 	clearFilters();
-	const size = Object.keys(currentCategoryFilters).length;
-	if(size < 2) {
-		return
+	if (Object.keys(currentCategoryFilters).length < 2) {
+		return;
 	}
 	for (let key in currentCategoryFilters) {
 		renderFilter(currentCategoryFilters[key].name, currentCategoryFilters[key].filter);
@@ -74,7 +72,7 @@ function changeFilters(clickedFilter) {
 			activeFilters = document.querySelectorAll(".filter_active");
 			renderActiveCards(activeFilters);
 		} else {
-			return
+			return;
 		}
 	}
 }
@@ -134,27 +132,21 @@ function renderCard(title, image, description, id) {
 
 const initialCategory = [...categoriesList].find((category) => category.id === "all");
 setCategoryActive(initialCategory);
-setNeededFilters({id: "all", innerText: "Все категории"});
+setNeededFilters({ id: "all", innerText: "Все категории" });
 
 function createInitialCards(id) {
-	if (categories[id].entries[0] === undefined) {
-		cardsContainer.classList.add("cards-wrapper_empty");
-		cardsContainer.innerHTML = "Cейчас в этой категории курсов нет, но они скоро появятся!";
-	} else {
-		cardsContainer.classList.remove("cards-wrapper_empty");
-	}
-	for (let key in categories) {
-		if (categories[key].id === id) {
-			const categoryCards = categories[key].entries;
-			categoryCards.forEach((filter) => {
-				if (id === cards[filter].id || id === "all") {
-					const filterCards = cards[filter].entries;
-					for (let filterCard in filterCards) {
-						renderCard(filterCard, filterCards[filterCard].img, filterCards[filterCard].description, filterCards[filterCard].id);
-					}
-				}
-			});
+	for (let key in cards) {
+		if (cards[key].id === id || id === "all") {
+			const categoryCards = cards[key].entries;
+			if(Object.keys(categoryCards).length < 1 ) {
+				cardsContainer.classList.add("cards-wrapper_empty");
+				cardsContainer.innerHTML = "Cейчас в этой категории курсов нет, но они скоро появятся!";
+			} else {
+				cardsContainer.classList.remove("cards-wrapper_empty");
+			}
+			for (let card in categoryCards) {
+				renderCard(card, categoryCards[card].img, categoryCards[card].description, categoryCards[card].id);
+			}
 		}
 	}
-
 }
