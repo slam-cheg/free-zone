@@ -1,31 +1,3 @@
-const categories = {
-	all: {
-		id: "all",
-		entries: ["UX/UI-дизайн", "Анимация и иллюстрация", "Моушн-дизайн и 3D", "Графический дизайн и коммуникации", "Дизайн среды и интерьера", "Маркетинг", "IT и менеджмент", "Видео и кино", "Современное искусство", "Программирование и софт"],
-	},
-	design: {
-		id: "design",
-		filters: ["ux-design", "motion-design", "animation-illustration", "graf-design", "int-design"],
-		entries: ["UX/UI-дизайн", "Анимация и иллюстрация", "Моушн-дизайн и 3D", "Графический дизайн и коммуникации", "Дизайн среды и интерьера"],
-	},
-	marketing: {
-		id: "marketing",
-		entries: ["Маркетинг"],
-	},
-	gamedev: {
-		id: "gamedev",
-		entries: [],
-	},
-	fashion: {
-		id: "fashion",
-		entries: [],
-	},
-	other: {
-		id: "other",
-		entries: ["IT и менеджмент", "Видео и кино", "Современное искусство", "Программирование и софт"],
-	},
-};
-
 const cards = {
 	"UX/UI-дизайн": {
 		id: "design",
@@ -246,7 +218,7 @@ const cards = {
 			},
 		},
 	},
-	"Маркетинг": {
+	Маркетинг: {
 		id: "marketing",
 		filter: "marketing",
 		entries: {
@@ -287,6 +259,16 @@ const cards = {
 			},
 		},
 	},
+	"Геймдев": {
+		id: "gamedev",
+		filter: "gamedev",
+		entries: {},
+	},
+	"Фэшн": {
+		id: "fashion",
+		filter: "fashion",
+		entries: {},
+	},
 };
 
-export default {categories, cards}
+export default { cards };
