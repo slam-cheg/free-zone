@@ -1,0 +1,11 @@
+.popup__speaker-photo {
+    width: 24px;
+    border-radius: 50px;
+    height: 24px;
+    object-fit: cover;
+    margin-left: -6px;
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+}

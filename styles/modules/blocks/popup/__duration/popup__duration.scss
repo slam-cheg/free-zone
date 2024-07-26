@@ -1,0 +1,13 @@
+.popup__duration {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	@include text-18;
+
+	#duration-separator {
+		width: 4px;
+		height: 4px;
+		background: #f1f2f3;
+        border-radius: 50px;
+	}
+}

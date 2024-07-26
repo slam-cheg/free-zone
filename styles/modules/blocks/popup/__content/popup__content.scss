@@ -1,0 +1,21 @@
+.popup__content {
+	overflow-x: scroll;
+	height: 474px;
+	padding-right: 10px;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		height: 0;
+		background: #f1f2f30d;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #f1f2f399;
+		border-radius: 100px;
+	}
+
+	&::-webkit-scrollbar-button {
+		width: 9px;
+		height: 9px;
+	}
+}

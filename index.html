@@ -24,12 +24,57 @@
 					<div class="filters__shadow"></div>
 				</div>
 				<ul class="cards">
-					<div class="cards-wrapper">
-						
-					</div>
+					<div class="cards-wrapper"></div>
 				</ul>
 			</div>
 		</section>
+
+		<div class="popup">
+			<div class="popup__container">
+				<div class="popup__header">
+					<div class="popup__title-wrapper">
+						<img src="https://static.tildacdn.com/tild6566-6333-4665-a365-663464303735/cinema-woman.png" alt="Женщины в истории кино" class="popup__ico" />
+						<h3 class="popup__title" id="course-title">Женщины в истории кино</h3>
+					</div>
+					<div class="popup__close"></div>
+				</div>
+				<div class="popup__separator"></div>
+				<div class="popup__content">
+					<div class="popup__line">
+						<h4 class="h4-title">Спикер курса</h4>
+						<div class="popup__speaker">
+							<div class="popup__speaker-line">
+								<div class="popup__photo-wrapper">
+								</div>
+								<p class="popup__speaker-name"></p>
+							</div>
+							<div class="popup__speaker-line">
+								<p class="popup__speaker-about"></p>
+							</div>
+						</div>
+					</div>
+					<div class="popup__separator"></div>
+					<div class="popup__line">
+						<h4 class="h4-title">Длительность курса</h4>
+						<div class="popup__duration" id="duration">
+							<span id="duration-lessons"></span>
+							<div id="duration-separator"></div>
+							<span id="duration-time"></span>
+						</div>
+					</div>
+					<div class="popup__separator"></div>
+					<div class="popup__line">
+						<h4 class="h4-title">Программа курса</h4>
+						<ul class="popup__program" id="program">
+						</ul>
+					</div>
+				</div>
+				<div class="popup__footer">
+					<a href="#price" class="popup__button">Оформить подписку</a>
+					<p class="popup__price">За <span>4 970</span>₽ в год</p>
+				</div>
+			</div>
+		</div>
 
 		<template id="filter-item-template">
 			<li class="list__item filter">
@@ -48,6 +93,14 @@
 					<p class="card__description">#####</p>
 				</div>
 			</li>
+		</template>
+
+		<template id="program-item-template">
+			<li class="popup__program-item"></li>
+		</template>
+
+		<template id="speaker-photo-template">
+			<img src="" alt="" class="popup__speaker-photo" />
 		</template>
 
 		<script type="module" src="./scripts/data.js"></script>

@@ -1,0 +1,6 @@
+.popup__program-item {
+	@include text-16;
+	padding: 16px;
+	background: rgba(241, 242, 243, 0.05);
+    border-radius: 12px;
+}

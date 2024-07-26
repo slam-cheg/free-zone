@@ -15,6 +15,7 @@
 @import "./modules/blocks/list/__item/_active/list__item_active.scss";
 @import "./modules/blocks/h2-title/h2-title.scss";
 @import "./modules/blocks/h3-title/h3-title.scss";
+@import "./modules/blocks/h4-title/h4-title.scss";
 @import "./modules/blocks/filters/filters.scss";
 @import "./modules/blocks/filters/_visible/filters_visible.scss";
 @import "./modules/blocks/filter/filter.scss";
@@ -32,3 +33,28 @@
 @import "./modules/blocks/wrapper-filters/wrapper-filters.scss";
 @import "./modules/blocks/filters/__shadow/filters__shadow.scss";
 @import "./modules/blocks/filters/__shadow/_left/filters__shadow_left.scss";
+
+@import "./modules/blocks/popup/popup.scss";
+@import "./modules/blocks/popup/_visible/popup_visible.scss";
+@import "./modules/blocks/popup/__container/popup__container.scss";
+@import "./modules/blocks/popup/__header/popup__header.scss";
+@import "./modules/blocks/popup/__title-wrapper/popup__title-wrapper.scss";
+@import "./modules/blocks/popup/__ico/popup__ico.scss";
+@import "./modules/blocks/popup/__title/popup__title.scss";
+@import "./modules/blocks/popup/__close/popup__close.scss";
+@import "./modules/blocks/popup/__separator/popup__separator.scss";
+@import "./modules/blocks/popup/__content/popup__content.scss";
+@import "./modules/blocks/popup/__line/popup__line.scss";
+@import "./modules/blocks/popup/__speaker/popup__speaker.scss";
+@import "./modules/blocks/popup/__speaker/-line/popup__speaker-line.scss";
+@import "./modules/blocks/popup/__photo-wrapper/popup__photo-wrapper.scss";
+@import "./modules/blocks/popup/__speaker/-photo/popup__speaker-photo.scss";
+@import "./modules/blocks/popup/__speaker/-name/popup__speaker-name.scss";
+@import "./modules/blocks/popup/__speaker/-about/popup__speaker-about.scss";
+@import "./modules/blocks/popup/__duration/popup__duration.scss";
+@import "./modules/blocks/popup/__program/popup__program.scss";
+@import "./modules/blocks/popup/__program/-item/popup__program-item.scss";
+
+@import "./modules/blocks/popup/__footer/popup__footer.scss";
+@import "./modules/blocks/popup/__button/popup__button.scss";
+@import "./modules/blocks/popup/__price/popup__price.scss";

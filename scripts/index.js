@@ -6,6 +6,7 @@ const cardTemplate = document.querySelector("#card-template").content.querySelec
 const filtersContainer = document.querySelector(".filters");
 const filterItemTemplate = document.querySelector("#filter-item-template").content.querySelector(".filter");
 const categoriesList = document.querySelectorAll(".list__item");
+const popup = document.querySelector(".popup");
 
 categoriesList.forEach((category) =>
 	category.addEventListener("click", () => {
@@ -51,7 +52,7 @@ function setNeededFilters(clickedCategory) {
 	if (Object.keys(currentCategoryFilters).length < 2) {
 		return;
 	} else {
-		renderFilter("Все направления", `all-${categoryId}`);
+		//renderFilter("Все направления", `all-${categoryId}`);
 	}
 	for (let key in currentCategoryFilters) {
 		renderFilter(currentCategoryFilters[key].name, currentCategoryFilters[key].filter);
@@ -97,7 +98,7 @@ function renderActiveCards(activeFilters) {
 			currentCategoryCards = cards[filter.innerText].entries;
 		}
 		for (let card in currentCategoryCards) {
-			renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id);
+			renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id, currentCategoryCards[card]);
 		}
 	});
 }
@@ -127,7 +128,7 @@ function renderFilter(filter, id) {
 	filtersContainer.append(filterElement);
 }
 
-function renderCard(title, image, description, id) {
+function renderCard(title, image, description, id, cardData) {
 	if (cardsContainer.querySelector(`#${id}`)) {
 		console.log(`${id} - double. Not rendered`);
 		return;
@@ -143,6 +144,10 @@ function renderCard(title, image, description, id) {
 	cardDescription.textContent = description;
 	cardElement.id = id;
 
+	cardElement.addEventListener("click", () => {
+		openPopup(title, cardData);
+	});
+
 	cardsContainer.append(cardElement);
 }
 
@@ -157,7 +162,7 @@ function createInitialCards(id) {
 		if ((cards[key].id === id && Object.keys(cards[key].entries).length > 1) || id === "all") {
 			const categoryCards = cards[key].entries;
 			for (let card in categoryCards) {
-				renderCard(card, categoryCards[card].img, categoryCards[card].description, categoryCards[card].id);
+				renderCard(card, categoryCards[card].img, categoryCards[card].description, categoryCards[card].id, categoryCards[card]);
 			}
 			continue;
 		}
@@ -166,4 +171,90 @@ function createInitialCards(id) {
 			cardsContainer.innerHTML = "Cейчас в этой категории курсов нет, но они скоро появятся!";
 		}
 	}
+}
+
+function serachPopupElements() {
+	return {
+		title: popup.querySelector(".popup__title"),
+		ico: popup.querySelector(".popup__ico"),
+		close: popup.querySelector(".popup__close"),
+		speakerPhotoContainer: popup.querySelector(".popup__photo-wrapper"),
+		speakerName: popup.querySelector(".popup__speaker-name"),
+		speakerAbout: popup.querySelector(".popup__speaker-about"),
+		lessonsText: popup.querySelector("#duration-lessons"),
+		timeText: popup.querySelector("#duration-time"),
+		programContainer: popup.querySelector("#program"),
+	};
+}
+
+function openPopup(title, cardData) {
+	const programItemTemplate = document.querySelector("#program-item-template").content;
+	const speakerPhotoTemplate = document.querySelector("#speaker-photo-template").content;
+	const popupContentNodes = serachPopupElements();
+
+	popupContentNodes.close.addEventListener("click", closePopup);
+	popup.addEventListener("click", closePopupByOverlay);
+	document.addEventListener("keyup", closePopupByEsc);
+
+	popupContentNodes.ico.src = cardData.img;
+	popupContentNodes.ico.alt = title;
+	popupContentNodes.title.textContent = title;
+	popupContentNodes.speakerName.textContent = cardData.description;
+	popupContentNodes.speakerAbout.textContent = cardData.speakerAbout;
+	popupContentNodes.lessonsText.textContent = cardData.duration.lessons;
+	popupContentNodes.timeText.textContent = cardData.duration.time;
+
+	cardData.program.forEach((programItem) => {
+		const newItem = programItemTemplate.cloneNode(true);
+		const itemText = newItem.querySelector(".popup__program-item");
+
+		itemText.textContent = programItem;
+		popupContentNodes.programContainer.append(newItem);
+	});
+
+	for(let i = 0; i < cardData.speakerPhoto.length; i++) {
+		if(i > 3 || cardData.speakerPhoto[i] === "") {
+			break;
+		}
+	    const newPhoto = speakerPhotoTemplate.cloneNode(true);
+		const photoItem = newPhoto.querySelector(".popup__speaker-photo");
+		photoItem.src = cardData.speakerPhoto[i];
+		
+		popupContentNodes.speakerPhotoContainer.append(newPhoto);
+	}
+
+	popup.classList.add("popup_visible");
+}
+
+function closePopup() {
+	popup.classList.remove("popup_visible");
+	const popupContentNodes = serachPopupElements();
+
+	setTimeout(() => {
+		popupContentNodes.ico.src = "";
+		popupContentNodes.ico.alt = "";
+		popupContentNodes.title.textContent = "";
+		popupContentNodes.speakerPhotoContainer.innerHTML = "";
+		popupContentNodes.speakerName.textContent = "";
+		popupContentNodes.speakerAbout.textContent = "";
+		popupContentNodes.lessonsText.textContent = "";
+		popupContentNodes.timeText.textContent = "";
+		popupContentNodes.programContainer.innerHTML = "";
+	}, 500);
+}
+
+function closePopupByEsc(evt) {
+	if (evt.key === "Escape") {
+		closePopup();
+	}
+}
+
+function closePopupByOverlay(evt) {
+	if (evt.target === evt.currentTarget) {
+		closePopup();
+	}
+}
+
+function formatPrices(num) {
+	return num.toString().toLocaleString("ru-RU");
 }
