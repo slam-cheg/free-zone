@@ -3,4 +3,9 @@
 	padding: 16px;
 	background: rgba(241, 242, 243, 0.05);
     border-radius: 12px;
+
+	@media screen and (max-width: $hor-tablet) {
+        font-size: 12px;
+        padding: 8px;
+	}
 }

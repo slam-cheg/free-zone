@@ -3,4 +3,8 @@
     position: relative;
     overflow: hidden;
     padding-bottom: 120px;
+
+    @media screen and (max-width: $hor-mobile) {
+        padding-bottom: 80px;
+    }
 }

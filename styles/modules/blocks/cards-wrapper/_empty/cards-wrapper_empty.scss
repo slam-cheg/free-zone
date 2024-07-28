@@ -7,4 +7,9 @@
     font-size: 20px;
     line-height: 1.2;
     font-family: Suisse Intl, Arial, sans-serif;
+    text-align: center;
+
+    @media screen and (max-width: $hor-mobile) {
+        font-size: 18px;
+    }
 }

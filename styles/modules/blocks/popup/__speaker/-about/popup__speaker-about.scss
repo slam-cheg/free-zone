@@ -1,4 +1,8 @@
 .popup__speaker-about {
     @include text-16;
     opacity: 0.6;
+
+    @media screen and (max-width: $hor-tablet) {
+        font-size: 12px;
+    }
 }

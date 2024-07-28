@@ -4,6 +4,10 @@
 	align-items: center;
 	@include text-18;
 
+	@media screen and (max-width: $hor-tablet) {
+		font-size: 14px;
+	}
+
 	#duration-separator {
 		width: 4px;
 		height: 4px;

@@ -1,3 +1,7 @@
 .popup__title {
     @include h3;
+
+    @media screen and (max-width: $ver-tablet) {
+        font-size: 18px;
+    }
 }

@@ -14,4 +14,8 @@
         background: $color-carrot;
         cursor: pointer;
     }
+
+    @media screen and (max-width: $hor-tablet) {
+        font-size: 16px;
+    }
 }

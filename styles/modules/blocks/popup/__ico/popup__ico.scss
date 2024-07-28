@@ -3,4 +3,9 @@
     height: 36px;
     object-fit: cover;
     border-radius: 8px;
+
+    @media screen and (max-width: $hor-tablet) {
+        width: 24px;
+        height: 24px;
+    }
 }

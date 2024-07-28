@@ -7,4 +7,10 @@
     background: #1D1D20;
     position: relative;
     overflow: hidden;
+
+    @media screen and (max-width: $hor-tablet) {
+        width: calc(100% - 20px);
+        max-height: 90%;
+        padding: 16px 8px 0 16px;
+    }
 }

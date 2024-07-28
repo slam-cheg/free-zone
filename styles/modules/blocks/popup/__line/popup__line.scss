@@ -8,4 +8,9 @@
         margin-bottom: 0;
         padding-bottom: 100px;
     }
+
+    @media screen and (max-width: $hor-tablet) {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
 }

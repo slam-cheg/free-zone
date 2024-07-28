@@ -8,4 +8,9 @@
     &:first-of-type {
         margin-left: 0;
     }
+
+    @media screen and (max-width: $hor-tablet) {
+        width: 16px;
+        height: 16px;
+    }
 }

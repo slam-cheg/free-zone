@@ -4,4 +4,8 @@
     align-items: center;
     margin-bottom: 20px;
     padding-right: 14px;
+
+    @media screen and (max-width: $hor-tablet) {
+        margin-bottom: 16px;
+    }
 }

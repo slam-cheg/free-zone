@@ -3,4 +3,8 @@
     height: 1px;
     background-color: rgba(241, 242, 243, 0.05);
     margin-bottom: 20px;
+
+    @media screen and (max-width: $hor-tablet) {
+        margin-bottom: 16px;
+    }
 }

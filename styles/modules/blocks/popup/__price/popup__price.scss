@@ -1,3 +1,7 @@
 .popup__price {
     @include text-16;
+
+    @media screen and (max-width: $hor-tablet) {
+        font-size: 14px;
+    }
 }
