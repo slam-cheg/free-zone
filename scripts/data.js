@@ -15,7 +15,8 @@ const cards = {
 					time: "3ч 21м"
 				},
 				program: ["Дизайн продукта в международных компаниях. Взаимодействие между членами команды, азы аргументированной дизайн-критики", "Понимание задачи", "Методы, применяемые в бизнес- и пользовательских исследованиях. Планирование и проведение содержательного интервью с пользователем", "Популярные методики, позволяющие суммировать результаты исследования и определить проблемы, которые будет решать дизайн", "Эксперимент и MVP. Пользовательские сценарии и решение задач проекта при помощи построения и проверки гипотез", "Методы информационной архитектуры, позволяющие организовать информацию на экране в соответствии с задачей; перемещение пользователя между экранами", "Уровни проработки макетов и задачи, которым они соответствуют. Базовые принципы юзабилити и визуального дизайна. Разработка вайерфреймов, ясно выражающих идею", "Пользовательский интерфейс и юзабилити", "Создание прототипа продукта и тестирование его дизайна с пользователями. Анализ результатов тестирования и адаптация пользовательского фидбека перед внесением правок в проект", "Создание кейса для портфолио, способного привлечь рекрутеров международных компаний. Подготовка презентации, которая рассказывает о вашем дизайн-процессе от исследования до тестирования прототипа"],
-				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/2b/c6/2bc65b7a-20c4-11ee-a2f0-0242c0a84004/3052c0c3-20c4-11ee-a2f0-0242c0a84004.jpg"]
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/2b/c6/2bc65b7a-20c4-11ee-a2f0-0242c0a84004/3052c0c3-20c4-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"UX: Поведенческое проектирование": {
 				id: "ux-behavior",
@@ -27,7 +28,8 @@ const cards = {
 					time: "0ч 58м"
 				},
 				program: ["Поведенческие сценарии. Ритуальные действия", "Негативное проектирование. Триггеры", "Психологическое взаимодействие с человеком. Экономия энергозатрат", "CJM-проектирование", "Логика двигателей роста интерактивной системы"],
-				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/48/72/487261de-20c4-11ee-a2f0-0242c0a84004/4dceae2f-20c4-11ee-a2f0-0242c0a84004.jpg"]
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/48/72/487261de-20c4-11ee-a2f0-0242c0a84004/4dceae2f-20c4-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"Практики цифровой доступности": {
 				id: "ux-accessibility",
@@ -39,7 +41,8 @@ const cards = {
 					time: "2ч 37м"
 				},
 				program: ["Основы доступности", "Дизайн","Веб-разработка", "iOS-разработка","Android-разработка", "Тестирование доступности"],
-				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/ce/d0/ced08985-20bc-11ee-a2f0-0242c0a84004/fb615841-4035-11ee-a2f0-0242c0a84004.jpg"]
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/ce/d0/ced08985-20bc-11ee-a2f0-0242c0a84004/fb615841-4035-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"Sketch. app": {
 				id: "sketch",
@@ -51,7 +54,8 @@ const cards = {
 					time: "4ч 49м"
 				},
 				program: ["Что такое sketch? Как инструмент завоевывал сердца дизайнеров", "Актуализация. Где искать информацию и как быть в курсе последних новостей?", "Интерфейс приложения. Часть 1. Главное меню, шорткаты, настройки", "Интерфейс приложения. Часть 2. Панель инструментов. Шорткаты", "Интерфейс приложения. Часть 3. Как быстро работать со сложными фигурами", "Интерфейс приложения. Часть 4. Организация слоев. Шорткаты. Плагин runner", "Сетки и модульные системы. Направляющие и раскладки. Функция калькулятора", "Стили текста и слоев. Замыкание слоев. Скрываем лишние элементы", "Символы. Плагины. Как экономить время", "Создаем веб-проект. Выстраиваем рабочий процесс. Готовим адаптивный веб-дизайн к передаче разработчикам. Handoff", "Экспорт ассетов. Как посмотреть мобильный дизайн на реальных устройствах"],
-				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/e0/4e/e04eb968-20c0-11ee-a2f0-0242c0a84004/e59b5c03-20c0-11ee-a2f0-0242c0a84004.jpg"]
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/e0/4e/e04eb968-20c0-11ee-a2f0-0242c0a84004/e59b5c03-20c0-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"Сетки и проектирование сайтов": {
 				id: "grid",
@@ -63,7 +67,8 @@ const cards = {
 					time: "3ч 06м"
 				},
 				program: ["Что такое сетка. Строение сетки", "История сеток", "Разные виды сеток и их применение", "Детализация сеток", "Как сетка влияет на эстетику и типографику сайта", "Микромодуль и его применение", "Что нужно учесть при проектировании сеток", "Сетка и адаптивный дизайн", "Алгоритм работы с сетками"],
-				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/f1/8b/f18b64bf-2165-11ee-a2f0-0242c0a84004/f8bf9fd9-2165-11ee-a2f0-0242c0a84004.jpg", "https://bangbangeducation.ru/content/files/block/f1/8b/f18b64bf-2165-11ee-a2f0-0242c0a84004/fe388b81-2165-11ee-a2f0-0242c0a84004.jpg"]
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/f1/8b/f18b64bf-2165-11ee-a2f0-0242c0a84004/f8bf9fd9-2165-11ee-a2f0-0242c0a84004.jpg", "https://bangbangeducation.ru/content/files/block/f1/8b/f18b64bf-2165-11ee-a2f0-0242c0a84004/fe388b81-2165-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 		},
 	},
@@ -73,39 +78,42 @@ const cards = {
 		entries: {
 			"Быстрая анимация иллюстрации в After Effects": {
 				id: "after-effects",
-				img: "https://static.tildacdn.com/tild3032-6134-4234-b438-363466646639/aae.png",
+				img: "https://storage.yandexcloud.net/bbe-kz/creative-cluster/47b9ca06-0587-11ec-8a9e-0242c0a85002.png",
 				description: "Константин Новиков",
-				speakerAbout: "",
+				speakerAbout: "Моушн-дизайнер, саунд-дизайнер, сооснователь арт-группы STRUTTURA/RANOZER. Преподавал моушн-дизайн в Британской высшей школе дизайна и Scream School. Работал с ВГТРК, «Яндексом», Sulliwan Studio, UtterDesign, Третьяковской галереей.",
 				duration: {
-					lessons: "",
-					time: ""
+					lessons: "5 уроков",
+					time: "0ч 53м"
 				},
-				program: [""],
-				speakerPhoto: [""]
+				program: ["Подготовка иллюстрации для анимации. Особенности работы со слоями", "Установка скриптов и импорт иллюстрации. Варианты импорта AI-файлов", "Создание параллакс-эффекта в Ae. Работа с 3D-пространством. Подготовка камеры. Мягкости ключей. Null объект", "Простейшая персонажная анимация Puppet Pin. Работа со скриптами. Простейшие экспрешены. Работа с энкор поинтом. Работа с эффектами", "Рендер в MP4 (h.264) и GIF через Media Encoder и Photoshop"],
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/80/2e/802e0cd0-20c4-11ee-a2f0-0242c0a84004/843731fb-20c4-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"Реалистичный концепт-арт": {
 				id: "concept-art",
-				img: "https://static.tildacdn.com/tild3731-6136-4164-b137-306635653331/concept.png",
+				img: "https://storage.yandexcloud.net/bbe-kz/creative-cluster/3402a22e-5cdd-11ec-bc94-0242c0a82007.png",
 				description: "Николай Разуев",
-				speakerAbout: "",
+				speakerAbout: "Концепт-дизайнер, мэтпейнтер, иллюстратор канадской студии DNEG.",
 				duration: {
-					lessons: "",
-					time: ""
+					lessons: "10 уроков",
+					time: "1ч 58м"
 				},
-				program: [""],
-				speakerPhoto: [""]
+				program: ["Подготовка референсов и мудборда для будущего Keyframe", "Быстрые черновые эскизы экшн-сцены. Эскиз композиции", "Построение перспективной сетки на базе фотографии. Определение планов в композиции", "Работа с задним планом на базе фотографий с использованием основных инструментов Photoshop: Pen Tool, Smudge tool, Blending options, Blending modes", "Объяснение основного принципа техники photobash", "Знакомство с функцией 3D в Photoshop. Поиск, импорт и редактирование 3D-модели. Настройка света и камеры", "Интеграция 3D-рендера в фон. Разбор инструментов: Dodge/Burn, Light/Dark", "Overpaint & adding details. Рисование поверх фототекстур. Работа с мелкими деталями. Разбор инструментов: работа с кистями, Masking", "FinalTouch."],
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/1e/db/1edb4774-20be-11ee-a2f0-0242c0a84004/22f11c61-20be-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"Создание 3D-композиции: Houdini, 3D-Coat, рендер": {
 				id: "threeD-composition",
-				img: "https://static.tildacdn.com/tild6238-3664-4263-a433-363364313636/3d-creating.png",
+				img: "https://storage.yandexcloud.net/bbe-kz/creative-cluster/b46bfb71-08ff-11ed-b4a4-0242ac1e0004.png",
 				description: "JA ZA",
-				speakerAbout: "",
+				speakerAbout: "Участник московской команды визуальных дизайнеров и цифровых художников Fuckyou.digital. Работал с Bad Bunny, Husky, Golgotha.",
 				duration: {
-					lessons: "",
-					time: ""
+					lessons: "3 урока",
+					time: "8ч 41м"
 				},
-				program: [""],
-				speakerPhoto: [""]
+				program: ["Что такое композиция и как с ней работать. 3D-Coat: интерфейс и начало создания композиции", "Houdini: интерфейс и продолжение работы с композицией", "Рендер: особенности работы с камерой и светом. Финализация композиции"],
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/6c/a2/6ca2539f-2166-11ee-a2f0-0242c0a84004/6fb8846b-2166-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 		},
 	},
@@ -115,51 +123,55 @@ const cards = {
 		entries: {
 			"Перспектива в иллюстрации": {
 				id: "perspective",
-				img: "https://static.tildacdn.com/tild3131-3264-4439-a333-616434656333/illustration-perspec.png",
+				img: "https://storage.yandexcloud.net/bbe-kz/creative-cluster/4f5ff59c-0588-11ec-8a9e-0242c0a85002.png",
 				description: "Илья Митрошин",
-				speakerAbout: "",
+				speakerAbout: "Иллюстратор и преподаватель курсов BBE. Востребованный иллюстратор в российском агентстве Bang! Bang! и международном агентстве Lemonade. Рисует для изданий GQ, Maxim, работает с крупными брендами.",
 				duration: {
-					lessons: "",
-					time: ""
+					lessons: "18 уроков",
+					time: "12ч 47м"
 				},
-				program: [""],
-				speakerPhoto: [""]
+				program: ["Общие сведения о перспективе, иллюзия удаленности и объемности", "Перспектива линий, плоскостей и окружности. Изображение простых объемов и предметов. Три измерения формы", "Масштабные измерения, определение размеров фигур при разном удалении, деление на части, единицы измерения. Размещение изображений людей и предметов на рисунке", "Выбор точки зрения, положения линии горизонта и расстояния до объекта", "Построение теней", "Построение отражений", "Необычная перспектива. Взгляд сверху и снизу. Воображаемый горизонт", "Линейная и воздушная перспектива", "Типичные ошибки при построении перспективы", "Методы искажения перспективы, недостатки описанных методов"],
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/34/ba/34ba15de-20d4-11ee-a2f0-0242c0a84004/38a8fc65-20d4-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"Что такое микростоки?": {
 				id: "microstock",
-				img: "https://static.tildacdn.com/tild3731-3665-4437-a264-626433356233/microstock.png",
+				img: "https://storage.yandexcloud.net/bbe-kz/creative-cluster/6528230f-08f5-11ed-b4a4-0242ac1e0004.png",
 				description: "Надя Снопек",
-				speakerAbout: "",
+				speakerAbout: "Микросток- и фриланс-иллюстраторка. Публиковалась в The Guardian, Huffington Post, Washington Post, Forbes, BBC News, New Scientist, Independent, Wired, Teen Vogue, Теориях и Практиках и Афише.",
 				duration: {
-					lessons: "",
-					time: ""
+					lessons: "0ч 57м",
+					time: "3 урока"
 				},
-				program: [""],
-				speakerPhoto: [""]
+				program: ["Основы микростоковой индустрии", "Микростоки как рынок", "Подготовка портфолио для микростоков"],
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/c9/aa/c9aa17b7-216f-11ee-a2f0-0242c0a84004/cd556e85-216f-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"Рисование 2.0. Техники для развития": {
 				id: "drawing-2",
-				img: "https://static.tildacdn.com/tild3566-3230-4166-b464-623930636131/draw20.png",
+				img: "https://storage.yandexcloud.net/bbe-kz/creative-cluster/94cc504f-0588-11ec-8a9e-0242c0a85002.png",
 				description: "Илья Митрошин",
-				speakerAbout: "",
+				speakerAbout: "Иллюстратор и преподаватель курсов BBE. Востребованный иллюстратор в российском агентстве Bang! Bang! и международном агентстве Lemonade. Рисует для изданий GQ, Maxim, работает с крупными брендами.",
 				duration: {
-					lessons: "",
-					time: ""
+					lessons: "6 уроков",
+					time: "3ч 21м"
 				},
-				program: [""],
-				speakerPhoto: [""]
+				program: ["Подход к обучению", "Развитие базовых навыков", "Изображение людей"],
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/c9/8f/c98fdeae-214e-11ee-a2f0-0242c0a84004/cee49039-214e-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"Фотореалистичные раскадровки": {
 				id: "photorealism",
-				img: "https://static.tildacdn.com/tild3934-3761-4132-a432-303738306562/photorealism.png",
+				img: "https://storage.yandexcloud.net/bbe-kz/creative-cluster/f6eddd7a-0588-11ec-8a9e-0242c0a85002.png",
 				description: "Татьяна Васьковская",
-				speakerAbout: "",
+				speakerAbout: "Иллюстратор из Москвы. Много лет сотрудничает с Mars, Nestle, Skoda и многими другими компаниями. Работала арт-директором в рекламных агентствах.",
 				duration: {
-					lessons: "",
-					time: ""
+					lessons: "9 урокоd",
+					time: "3ч 28м"
 				},
-				program: [""],
-				speakerPhoto: [""]
+				program: ["Введение — что, как, зачем. Узнаем, что такое сториборды и зачем они нужны. Научимся различать хороший и плохой бриф", "Собираем материалы. Учимся искать референсы и обращать внимание на детали", "", "", "", "", "", "", "", "", "", "", ""],
+				speakerPhoto: ["https://bangbangeducation.ru/content/files/block/b4/11/b411b565-2167-11ee-a2f0-0242c0a84004/bbe37a38-2167-11ee-a2f0-0242c0a84004.jpg"],
+				whatToLearn: "text text text",
 			},
 			"Основы Procreate": {
 				id: "procreate",
@@ -171,7 +183,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 		},
 	},
@@ -189,7 +202,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Мультидисциплинарный дизайн": {
 				id: "multidisciplinary-design",
@@ -201,7 +215,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Создание пространства в Adobe Illustrator: инструменты и приемы": {
 				id: "adobe-illustrator",
@@ -213,7 +228,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Нелинейная история дизайна": {
 				id: "nonlinear-design",
@@ -225,7 +241,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Основы айдентики: построение визуальной системы": {
 				id: "identity",
@@ -237,7 +254,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 		},
 	},
@@ -255,7 +273,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 		},
 	},
@@ -273,7 +292,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Как узнать себя через искусство?": {
 				id: "self-art",
@@ -285,7 +305,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Что случилось с искусством за последние 100 лет — короче, Современность!": {
 				id: "art-100y",
@@ -297,7 +318,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"История современной музыки и теория звука": {
 				id: "music-history",
@@ -309,7 +331,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 		},
 	},
@@ -327,7 +350,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Создание новых продуктов: методология Customer Development": {
 				id: "customer-development",
@@ -339,7 +363,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Обработка и анализ данных в Excel": {
 				id: "excel",
@@ -351,7 +376,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Как руководить дизайнерами": {
 				id: "design-management",
@@ -363,7 +389,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Методы анализа рынка и конкурентов": {
 				id: "market-analysis",
@@ -375,7 +402,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 		},
 	},
@@ -393,7 +421,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Танец и пластика в кино. Особенности языка и история драматургии": {
 				id: "cinema-dance",
@@ -405,7 +434,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 		},
 	},
@@ -423,7 +453,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Рисуем кодом": {
 				id: "code-art",
@@ -435,7 +466,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Создание музыки с помощью компьютера и доступного ПО": {
 				id: "music-create",
@@ -447,7 +479,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 		},
 	},
@@ -465,7 +498,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Креативы в контекстной рекламе": {
 				id: "creatives",
@@ -477,7 +511,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"CRM-маркетолог": {
 				id: "crm",
@@ -489,7 +524,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Digital-директор": {
 				id: "digital-director",
@@ -501,7 +537,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Как делать исследования маркетологу": {
 				id: "research",
@@ -513,7 +550,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"Account based marketing": {
 				id: "account-based-marketing",
@@ -525,7 +563,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 			"5 шагов к продающему контент-плану": {
 				id: "content-plan",
@@ -537,7 +576,8 @@ const cards = {
 					time: ""
 				},
 				program: [""],
-				speakerPhoto: [""]
+				speakerPhoto: [""],
+				whatToLearn: "text text text",
 			},
 		},
 	},

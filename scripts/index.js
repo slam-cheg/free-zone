@@ -215,6 +215,7 @@ function serachPopupElements() {
 		lessonsText: popup.querySelector("#duration-lessons"),
 		timeText: popup.querySelector("#duration-time"),
 		programContainer: popup.querySelector("#program"),
+		whatToLearn: popup.querySelector("#what-to-learn"),
 	};
 }
 
@@ -234,6 +235,7 @@ function openPopup(title, cardData) {
 	popupContentNodes.speakerAbout.textContent = cardData.speakerAbout;
 	popupContentNodes.lessonsText.textContent = cardData.duration.lessons;
 	popupContentNodes.timeText.textContent = cardData.duration.time;
+	popupContentNodes.whatToLearn.textContent = cardData.whatToLearn;
 
 	cardData.program.forEach((programItem) => {
 		const newItem = programItemTemplate.cloneNode(true);
