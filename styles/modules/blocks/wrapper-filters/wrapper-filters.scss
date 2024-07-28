@@ -1,7 +1,17 @@
 .wrapper-filters {
     overflow: visible;
-    width: $desktop;
+    width: 100%;
     position: relative;
-    left: -60px;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 1199px) {
+        left: -60px;
+    }
+
+    @media screen and (max-width: 959px) {
+        // width: calc(100% + 120px);
+        // margin-inline: -60px;
+        // left: 0;
+        display: none;
+    }
 }

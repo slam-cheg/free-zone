@@ -7,16 +7,51 @@ const filtersContainer = document.querySelector(".filters");
 const filterItemTemplate = document.querySelector("#filter-item-template").content.querySelector(".filter");
 const categoriesList = document.querySelectorAll(".list__item");
 const popup = document.querySelector(".popup");
+const categoriesMobile = document.querySelector(".list-mobile");
+const categoriesMobileSelected = categoriesMobile.querySelector(".list-mobile__select");
+const categoriesMobileContainer = categoriesMobile.querySelector(".list-mobile__wrapper");
+const categoriesMobileList = categoriesMobileContainer.querySelectorAll(".list-mobile__item");
 
 categoriesList.forEach((category) =>
 	category.addEventListener("click", () => {
 		setCategoryActive(category);
 	}),
 );
-filtersContainer.addEventListener("wheel", (evt) => {
-	evt.preventDefault();
-	filtersContainer.scrollLeft += evt.deltaY;
-});
+
+if (window.innerWidth < 1200) {
+	categoriesMobileSelected.addEventListener("click", openMobileCategories);
+	categoriesMobileList.forEach((category) => {
+		category.addEventListener("click", () => {
+			setMobileCategoryActive(category);
+		});
+	});
+} else {
+	filtersContainer.addEventListener("wheel", (evt) => {
+		evt.preventDefault();
+		filtersContainer.scrollLeft += evt.deltaY;
+	});
+}
+
+function openMobileCategories() {
+	categoriesMobileContainer.classList.add("list-mobile__wrapper_active");
+	categoriesMobileSelected.addEventListener("click", closeMobileCategories)
+}
+
+function closeMobileCategories() {
+	categoriesMobileContainer.classList.remove("list-mobile__wrapper_active");
+	categoriesMobileSelected.removeEventListener("click", closeMobileCategories)
+}
+
+function setMobileCategoryActive(clickedCategory) {
+	categoriesMobileList.forEach((category) => category.classList.remove("list-mobile__item_active"));
+	clearCards();
+	clickedCategory.classList.add("list-mobile__item_active");
+	createInitialCards(clickedCategory.id);
+	setNeededFilters(clickedCategory);
+
+	categoriesMobileSelected.textContent = clickedCategory.textContent;
+	closeMobileCategories();
+}
 
 function setCategoryActive(clickedCategory) {
 	categoriesList.forEach((category) => category.classList.remove("list__item_active"));
@@ -151,10 +186,6 @@ function renderCard(title, image, description, id, cardData) {
 	cardsContainer.append(cardElement);
 }
 
-const initialCategory = [...categoriesList].find((category) => category.id === "all");
-setCategoryActive(initialCategory);
-setNeededFilters({ id: "all", innerText: "Все категории" });
-
 function createInitialCards(id) {
 	cardsContainer.classList.remove("cards-wrapper_empty");
 
@@ -212,14 +243,14 @@ function openPopup(title, cardData) {
 		popupContentNodes.programContainer.append(newItem);
 	});
 
-	for(let i = 0; i < cardData.speakerPhoto.length; i++) {
-		if(i > 3 || cardData.speakerPhoto[i] === "") {
+	for (let i = 0; i < cardData.speakerPhoto.length; i++) {
+		if (i > 3 || cardData.speakerPhoto[i] === "") {
 			break;
 		}
-	    const newPhoto = speakerPhotoTemplate.cloneNode(true);
+		const newPhoto = speakerPhotoTemplate.cloneNode(true);
 		const photoItem = newPhoto.querySelector(".popup__speaker-photo");
 		photoItem.src = cardData.speakerPhoto[i];
-		
+
 		popupContentNodes.speakerPhotoContainer.append(newPhoto);
 	}
 
@@ -255,6 +286,12 @@ function closePopupByOverlay(evt) {
 	}
 }
 
-function formatPrices(num) {
-	return num.toString().toLocaleString("ru-RU");
+if (window.innerWidth > 1200) {
+	const initialCategory = [...categoriesList].find((category) => category.id === "all");
+	setCategoryActive(initialCategory);
+	setNeededFilters({ id: "all", innerText: "Все категории" });
+} else {
+	const initialCategory = [...categoriesMobileList].find((category) => category.id === "all");
+	setMobileCategoryActive(initialCategory);
+	setNeededFilters({ id: "all", innerText: "Все категории" });
 }

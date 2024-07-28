@@ -1,0 +1,13 @@
+.list-mobile__select {
+    background: $color-carrot;
+    @include filter;
+    border-radius:100px;
+    padding: 16px 0;
+    transition: .3s;
+    width: calc(100% - 8px);
+    text-align: center;
+    margin: 4px;
+    z-index: 99;
+    border:  none;
+    outline: none;
+}

@@ -6,5 +6,9 @@
     list-style: none;
     overflow: visible;
     border-radius: 16px;
+
+    @media screen and (max-width: $hor-mobile) {
+        padding: 16px 10px 16px 16px;
+    }
 }
 

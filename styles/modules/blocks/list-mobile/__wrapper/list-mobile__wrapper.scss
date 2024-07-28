@@ -1,0 +1,30 @@
+.list-mobile__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 98;
+    background: $color-grey;
+    border-radius: 28px;
+    height: 62px;
+    overflow: hidden;
+    transition: .3s;
+
+    @media screen and (max-width: $hor-mobile) {
+        height: 60px;
+    }
+
+    &_active {
+        height: 354px;
+        transition: .3s;
+        padding: 74px 20px 20px 20px;
+
+        @media screen and (max-width: $hor-mobile) {
+            height: 336px;
+        }
+    }
+
+
+}

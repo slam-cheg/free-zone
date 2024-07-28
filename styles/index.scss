@@ -9,10 +9,18 @@
 @import "./modules/mixins.scss";
 @import "./modules/blocks/inner-wrapper/inner-wrapper.scss";
 @import "./modules/blocks/courses/courses.scss";
+
 @import "./modules/blocks/list/list.scss";
 @import "./modules/blocks/list/_filters/list_filters.scss";
 @import "./modules/blocks/list/__item/list__item.scss";
 @import "./modules/blocks/list/__item/_active/list__item_active.scss";
+
+@import "./modules/blocks/list-mobile/list-mobile.scss";
+@import "./modules/blocks/list-mobile/__wrapper/list-mobile__wrapper.scss";
+@import "./modules/blocks/list-mobile/__select/list-mobile__select.scss";
+@import "./modules/blocks/list-mobile/__item/list-mobile__item.scss";
+//@import "./modules/blocks/list-mobile/__separator/list-mobile__separator.scss";
+
 @import "./modules/blocks/h2-title/h2-title.scss";
 @import "./modules/blocks/h3-title/h3-title.scss";
 @import "./modules/blocks/h4-title/h4-title.scss";

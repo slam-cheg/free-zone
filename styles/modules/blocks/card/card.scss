@@ -8,4 +8,12 @@
     height: 290px;
     overflow: hidden;
     cursor: pointer;
+
+    @media screen and (max-width: $hor-tablet) {
+        height: 320px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+        height: max-content;
+    }
 }

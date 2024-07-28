@@ -1,0 +1,10 @@
+.list-mobile {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 960px) {
+        display: none;
+    }
+}

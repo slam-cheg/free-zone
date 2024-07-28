@@ -15,4 +15,14 @@
         background: #F1F2F399;
         border-radius: 100px;
     }
+
+    @media screen and (max-width: $hor-tablet) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: $ver-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: $hor-mobile) {
+        grid-template-columns: repeat(1, 1fr)
+    }
 }
