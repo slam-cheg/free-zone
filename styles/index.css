@@ -388,7 +388,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  height: 290px;
+  height: 332px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -489,7 +489,7 @@
 }
 
 .popup__container {
-  width: 934px;
+  width: 1320px;
   height: auto;
   max-height: 574px;
   padding: 24px 10px 0 24px;
@@ -498,7 +498,17 @@
   position: relative;
   overflow: hidden;
 }
+@media screen and (max-width: 1439px) {
+  .popup__container {
+    width: 1160px;
+  }
+}
 @media screen and (max-width: 1199px) {
+  .popup__container {
+    width: 940px;
+  }
+}
+@media screen and (max-width: 959px) {
   .popup__container {
     width: calc(100% - 20px);
     max-height: 90%;
@@ -731,6 +741,14 @@
     font-size: 12px;
     padding: 8px;
   }
+}
+
+.popup__learn {
+  color: #F1F2F3;
+  font-family: Suisse Intl, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .popup__footer {

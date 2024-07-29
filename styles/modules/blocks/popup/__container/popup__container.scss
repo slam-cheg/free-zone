@@ -1,5 +1,5 @@
 .popup__container {
-    width: 934px;
+    width: 1320px;
     height: auto;
     max-height: 574px;
     padding: 24px 10px 0 24px;
@@ -8,7 +8,15 @@
     position: relative;
     overflow: hidden;
 
+    @media screen and (max-width: $desktop) {
+        width: 1160px;
+    }
+
     @media screen and (max-width: $hor-tablet) {
+        width: 940px;
+    }
+
+    @media screen and (max-width: $ver-tablet) {
         width: calc(100% - 20px);
         max-height: 90%;
         padding: 16px 8px 0 16px;
