@@ -12,6 +12,11 @@
         // width: calc(100% + 120px);
         // margin-inline: -60px;
         // left: 0;
-        display: none;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+        left: 0;
+        margin-inline: -30px;
+        width: calc(100% + 60px);
     }
 }

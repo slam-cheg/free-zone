@@ -49,7 +49,7 @@ function setMobileCategoryActive(clickedCategory) {
 	createInitialCards(clickedCategory.id);
 	setNeededFilters(clickedCategory);
 
-	categoriesMobileSelected.textContent = clickedCategory.textContent;
+	categoriesMobileSelected.innerHTML = clickedCategory.textContent;
 	closeMobileCategories();
 }
 
@@ -90,7 +90,7 @@ function setNeededFilters(clickedCategory) {
 		//renderFilter("Все направления", `all-${categoryId}`);
 	}
 	for (let key in currentCategoryFilters) {
-		renderFilter(currentCategoryFilters[key].name, currentCategoryFilters[key].filter);
+		renderFilter(currentCategoryFilters[key].name, currentCategoryFilters[key].filter, clickedCategory.id);
 	}
 	if (filtersContainer.innerHTML !== "") {
 		filtersContainer.classList.add("filters_visible");
@@ -109,7 +109,9 @@ function changeFilters(clickedFilter) {
 			activeFilters = document.querySelectorAll(".filter_active");
 			renderActiveCards(activeFilters);
 		} else {
-			return;
+			const categoryId = clickedFilter.dataset.category;
+			const category = document.querySelector(`.list__item[id="${categoryId}"]`);
+			category.click();
 		}
 	}
 }
@@ -147,7 +149,7 @@ function clearCards() {
 	cardsContainer.innerHTML = "";
 }
 
-function renderFilter(filter, id) {
+function renderFilter(filter, id, catgoryId) {
 	const filterElement = filterItemTemplate.cloneNode(true);
 	const filterName = filterElement.querySelector(".filter__name");
 
@@ -157,8 +159,9 @@ function renderFilter(filter, id) {
 
 	filterElement.addEventListener("click", () => changeFilters(filterElement));
 
-	filterName.textContent = filter;
+	filterName.innerHTML = filter;
 	filterElement.id = id;
+	filterElement.dataset.category = catgoryId;
 
 	filtersContainer.append(filterElement);
 }
@@ -175,8 +178,8 @@ function renderCard(title, image, description, id, cardData) {
 
 	cardImage.src = image;
 	cardImage.alt = title;
-	cardTitle.textContent = title;
-	cardDescription.textContent = description;
+	cardTitle.innerHTML = title;
+	cardDescription.innerHTML = description;
 	cardElement.id = id;
 
 	cardElement.addEventListener("click", () => {
@@ -230,18 +233,18 @@ function openPopup(title, cardData) {
 
 	popupContentNodes.ico.src = cardData.img;
 	popupContentNodes.ico.alt = title;
-	popupContentNodes.title.textContent = title;
-	popupContentNodes.speakerName.textContent = cardData.description;
-	popupContentNodes.speakerAbout.textContent = cardData.speakerAbout;
-	popupContentNodes.lessonsText.textContent = cardData.duration.lessons;
-	popupContentNodes.timeText.textContent = cardData.duration.time;
-	popupContentNodes.whatToLearn.textContent = cardData.whatToLearn;
+	popupContentNodes.title.innerHTML = title;
+	popupContentNodes.speakerName.innerHTML = cardData.description;
+	popupContentNodes.speakerAbout.innerHTML = cardData.speakerAbout;
+	popupContentNodes.lessonsText.innerHTML = cardData.duration.lessons;
+	popupContentNodes.timeText.innerHTML = cardData.duration.time;
+	popupContentNodes.whatToLearn.innerHTML = cardData.whatToLearn;
 
 	cardData.program.forEach((programItem) => {
 		const newItem = programItemTemplate.cloneNode(true);
 		const itemText = newItem.querySelector(".popup__program-item");
 
-		itemText.textContent = programItem;
+		itemText.innerHTML = programItem;
 		popupContentNodes.programContainer.append(newItem);
 	});
 

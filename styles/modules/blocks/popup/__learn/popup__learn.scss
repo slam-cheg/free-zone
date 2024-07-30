@@ -1,3 +1,7 @@
 .popup__learn {
     @include text-16;
+
+    @media screen and (max-width: $hor-mobile) {
+        font-size: 12px;
+    }
 }

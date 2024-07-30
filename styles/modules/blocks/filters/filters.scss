@@ -10,15 +10,9 @@
     padding: 0 60px;
 
 
-	// &::after {
-    //     position: absolute;
-    //     right: 0;
-    //     top: 0;
-    //     content: '';
-    //     width: 60px;
-    //     height: 100%;
-	// 	background: linear-gradient(270deg, #161618 0%, rgba(22, 22, 24, 0) 100%), linear-gradient(270deg, #161618 0%, rgba(22, 22, 24, 0) 100%);
-	//}
+	@media screen and (max-width: $hor-mobile) {
+		padding: 0 30px;
+	}
 
 	&::-webkit-scrollbar {
 		display: none;
