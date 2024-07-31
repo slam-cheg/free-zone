@@ -120,19 +120,9 @@ function renderActiveCards(activeFilters) {
 	clearCards();
 	let currentCategoryCards = {};
 	activeFilters.forEach((filter) => {
-		for (let category in cards) {
-			// if (cards[category].id === filter.id) {
-			// 	const entries = cards[category].entries;
-			// 	for (let fil in entries) {
-			// 		currentCategoryCards[fil] = entries[fil];
-			// 	}
-			// } else {
-			// 	currentCategoryCards = cards[filter.querySelector(".filter__name").textContent].entries;
-			// }
-			currentCategoryCards = cards[filter.querySelector(".filter__name").textContent].entries;
-			for (let card in currentCategoryCards) {
-				renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id, currentCategoryCards[card]);
-			}
+		currentCategoryCards = cards[filter.querySelector(".filter__name").textContent].entries;
+		for (let card in currentCategoryCards) {
+			renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id, currentCategoryCards[card]);
 		}
 	});
 }
@@ -149,10 +139,6 @@ function clearCards() {
 function renderFilter(filter, id, catgoryId) {
 	const filterElement = filterItemTemplate.cloneNode(true);
 	const filterName = filterElement.querySelector(".filter__name");
-
-	if (filter === "Все направления") {
-		filterElement.classList.add("filter_active");
-	}
 
 	filterElement.addEventListener("click", () => changeFilters(filterElement));
 
@@ -172,7 +158,7 @@ function renderCard(title, image, description, id, cardData) {
 	const cardImage = cardElement.querySelector(".card__image");
 	const cardTitle = cardElement.querySelector(".h3-title");
 	const cardDescription = cardElement.querySelector(".card__description");
-
+	
 	cardImage.src = image;
 	cardImage.alt = title;
 	cardTitle.innerHTML = title;
@@ -182,6 +168,7 @@ function renderCard(title, image, description, id, cardData) {
 	cardElement.addEventListener("click", () => {
 		openPopup(title, cardData);
 	});
+
 
 	cardsContainer.append(cardElement);
 }

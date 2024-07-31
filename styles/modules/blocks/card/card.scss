@@ -8,6 +8,8 @@
     height: 332px;
     overflow: hidden;
     cursor: pointer;
+    transform: translateY(0);
+    transition: .5s;
 
     @media screen and (max-width: $hor-tablet) {
         height: 320px;
