@@ -117,14 +117,16 @@ function changeFilters(clickedFilter) {
 }
 
 function renderActiveCards(activeFilters) {
+	const cardsToRender = [];
 	clearCards();
 	let currentCategoryCards = {};
 	activeFilters.forEach((filter) => {
 		currentCategoryCards = cards[filter.querySelector(".filter__name").textContent].entries;
 		for (let card in currentCategoryCards) {
-			renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id, currentCategoryCards[card]);
+			cardsToRender.push(renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id, currentCategoryCards[card]));
 		}
 	});
+	renderAllCards(cardsToRender);
 	cardsContainer.scrollTo(0, 0)
 }
 
@@ -171,17 +173,19 @@ function renderCard(title, image, description, id, cardData) {
 	});
 
 
-	cardsContainer.append(cardElement);
+	return cardElement;
+	//cardsContainer.append(cardElement);
 }
 
 function createInitialCards(id) {
+	const cardsToRender = [];
 	cardsContainer.classList.remove("cards-wrapper_empty");
 
 	for (let key in cards) {
 		if ((cards[key].id === id && Object.keys(cards[key].entries).length > 1) || id === "all") {
 			const categoryCards = cards[key].entries;
 			for (let card in categoryCards) {
-				renderCard(card, categoryCards[card].img, categoryCards[card].description, categoryCards[card].id, categoryCards[card]);
+				cardsToRender.push(renderCard(card, categoryCards[card].img, categoryCards[card].description, categoryCards[card].id, categoryCards[card]));
 			}
 			continue;
 		}
@@ -190,6 +194,7 @@ function createInitialCards(id) {
 			cardsContainer.innerHTML = "Cейчас в этой категории курсов нет, но они скоро появятся!";
 		}
 	}
+	renderAllCards(cardsToRender);
 	cardsContainer.scrollTo(0, 0)
 }
 
@@ -285,4 +290,24 @@ if (window.innerWidth > 1200) {
 	const initialCategory = [...categoriesMobileList].find((category) => category.id === "all");
 	setMobileCategoryActive(initialCategory);
 	setNeededFilters({ id: "all", innerText: "Все категории" });
+}
+
+function renderAllCards(cardsArray) {
+	let timer = 0;
+
+	cardsContainer.append(...cardsArray)
+
+	cardsArray.forEach((card) => {
+		card.style.opacity = 0;
+		timeOut(card)
+	})
+
+	function timeOut(card) {
+		setTimeout(() => {
+			card.style.opacity = 1;
+		}, timer);
+		timer += 50;
+	}
+
+
 }
