@@ -125,6 +125,7 @@ function renderActiveCards(activeFilters) {
 			renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id, currentCategoryCards[card]);
 		}
 	});
+	cardsContainer.scrollTo(0, 0)
 }
 
 function clearFilters() {
@@ -189,6 +190,7 @@ function createInitialCards(id) {
 			cardsContainer.innerHTML = "Cейчас в этой категории курсов нет, но они скоро появятся!";
 		}
 	}
+	cardsContainer.scrollTo(0, 0)
 }
 
 function serachPopupElements() {
