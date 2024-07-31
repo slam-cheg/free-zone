@@ -34,12 +34,12 @@ if (window.innerWidth < 1200) {
 
 function openMobileCategories() {
 	categoriesMobileContainer.classList.add("list-mobile__wrapper_active");
-	categoriesMobileSelected.addEventListener("click", closeMobileCategories)
+	categoriesMobileSelected.addEventListener("click", closeMobileCategories);
 }
 
 function closeMobileCategories() {
 	categoriesMobileContainer.classList.remove("list-mobile__wrapper_active");
-	categoriesMobileSelected.removeEventListener("click", closeMobileCategories)
+	categoriesMobileSelected.removeEventListener("click", closeMobileCategories);
 }
 
 function setMobileCategoryActive(clickedCategory) {
@@ -118,24 +118,21 @@ function changeFilters(clickedFilter) {
 
 function renderActiveCards(activeFilters) {
 	clearCards();
-	let currentCategoryCards;
+	let currentCategoryCards = {};
 	activeFilters.forEach((filter) => {
-		if (!cards[filter.innerText]) {
-			const filterCut = filter.id.split("-")[1];
-			currentCategoryCards = {};
-			for (let category in cards) {
-				if (cards[category].id === filterCut) {
-					const entries = cards[category].entries;
-					for (let fil in entries) {
-						currentCategoryCards[fil] = entries[fil];
-					}
-				}
+		for (let category in cards) {
+			// if (cards[category].id === filter.id) {
+			// 	const entries = cards[category].entries;
+			// 	for (let fil in entries) {
+			// 		currentCategoryCards[fil] = entries[fil];
+			// 	}
+			// } else {
+			// 	currentCategoryCards = cards[filter.querySelector(".filter__name").textContent].entries;
+			// }
+			currentCategoryCards = cards[filter.querySelector(".filter__name").textContent].entries;
+			for (let card in currentCategoryCards) {
+				renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id, currentCategoryCards[card]);
 			}
-		} else {
-			currentCategoryCards = cards[filter.innerText].entries;
-		}
-		for (let card in currentCategoryCards) {
-			renderCard(card, currentCategoryCards[card].img, currentCategoryCards[card].description, currentCategoryCards[card].id, currentCategoryCards[card]);
 		}
 	});
 }

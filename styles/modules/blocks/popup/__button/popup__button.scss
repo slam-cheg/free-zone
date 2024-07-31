@@ -18,4 +18,10 @@
     @media screen and (max-width: $hor-tablet) {
         font-size: 16px;
     }
+    @media screen and (max-width: $ver-mobile) {
+        font-size: 16px;
+        padding: 10px;
+        min-width: unset;
+        width: 50%;
+    }
 }

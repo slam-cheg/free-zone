@@ -93,7 +93,7 @@ const cards = {
 			},
 		},
 	},
-	"Моушн-дизайн и&nbsp;3D": {
+	"Моушн-дизайн и 3D": {
 		id: "design",
 		filter: "motion-design",
 		entries: {
@@ -138,7 +138,7 @@ const cards = {
 			},
 		},
 	},
-	"Анимация и&nbsp;иллюстрация": {
+	"Анимация и иллюстрация": {
 		id: "design",
 		filter: "animation-illustration",
 		entries: {
@@ -209,7 +209,7 @@ const cards = {
 			},
 		},
 	},
-	"Графический дизайн и&nbsp;коммуникации": {
+	"Графический дизайн и коммуникации": {
 		id: "design",
 		filter: "graf-design",
 		entries: {
@@ -280,7 +280,7 @@ const cards = {
 			},
 		},
 	},
-	"Дизайн среды и&nbsp;интерьера": {
+	"Дизайн среды и интерьера": {
 		id: "design",
 		filter: "int-design",
 		entries: {
@@ -357,7 +357,7 @@ const cards = {
 			},
 		},
 	},
-	"IT&nbsp;и&nbsp;менеджмент": {
+	"IT и менеджмент": {
 		id: "other",
 		filter: "it-management",
 		entries: {
@@ -428,7 +428,7 @@ const cards = {
 			},
 		},
 	},
-	"Видео и&nbsp;кино": {
+	"Видео и кино": {
 		id: "other",
 		filter: "video-cinema",
 		entries: {
@@ -460,7 +460,7 @@ const cards = {
 			},
 		},
 	},
-	"Программирование и&nbsp;софт": {
+	"Программирование и софт": {
 		id: "other",
 		filter: "programming-software",
 		entries: {

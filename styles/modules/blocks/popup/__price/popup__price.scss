@@ -4,4 +4,7 @@
     @media screen and (max-width: $hor-tablet) {
         font-size: 14px;
     }
+    @media screen and (max-width: $ver-mobile) {
+        width: 130px;
+    }
 }
