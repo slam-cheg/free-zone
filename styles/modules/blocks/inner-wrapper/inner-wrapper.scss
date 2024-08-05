@@ -16,6 +16,6 @@
 		max-width: 460px;
 	}
 	@media screen and (max-width: $ver-mobile) {
-		max-width: 300px;
+		max-width: calc(100% - 24px);
 	}
 }
