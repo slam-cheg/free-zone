@@ -1,10 +1,15 @@
-@import "../fonts/fonts.css";
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("./suisseintl.woff2") format("woff2"), url("./suisseintl.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 .inner-wrapper {
   width: 1319px;
   margin: 0 auto;
